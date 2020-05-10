@@ -1,0 +1,177 @@
+[data-icon]::before {
+  content: attr(data-icon);
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111111;
+  color: #fff;
+}
+
+body #main-content {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heart-button {
+  color: #ff245b;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.heart-button > span {
+  position: absolute;
+}
+
+.heart-button > span.on-active {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: 0.2s cubic-bezier(0.53, 0.74, 0.03, 2.13) all;
+  transition: 0.2s cubic-bezier(0.53, 0.74, 0.03, 2.13) all;
+}
+
+.heart-button > span.not-active {
+  -webkit-transition: 0.2s cubic-bezier(0.53, 0.74, 0.03, 2.13) all;
+  transition: 0.2s cubic-bezier(0.53, 0.74, 0.03, 2.13) all;
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.heart-button > span.circle {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0px solid #63f5ff;
+  border-radius: 100px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.heart-button.active > span.on-active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.heart-button.active > span.not-active {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.heart-button.active > span.circle {
+  -webkit-animation: 0.2s pop-out ease-in-out forwards;
+          animation: 0.2s pop-out ease-in-out forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+@-webkit-keyframes pop-out {
+  0% {
+    border: 30px solid #e1d2fa;
+  }
+  50% {
+    border: 10px solid #e1d2fa;
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.6;
+    border: 10px solid #e1d2fa;
+  }
+  100% {
+    border: 0px solid #e1d2fa;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes pop-out {
+  0% {
+    border: 30px solid #e1d2fa;
+  }
+  50% {
+    border: 10px solid #e1d2fa;
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.6;
+    border: 10px solid #e1d2fa;
+  }
+  100% {
+    border: 0px solid #e1d2fa;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.counter {
+  font-family: "Open Sans";
+  font-size: 10pt;
+  color: #fefefe71;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+  margin: 5px;
+}
+
+.counter.incremented {
+  -webkit-transition: 0.2s cubic-bezier(0.53, 0.74, 0.03, 2.13) all;
+  transition: 0.2s cubic-bezier(0.53, 0.74, 0.03, 2.13) all;
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+/*# sourceMappingURL=main.css.map */
